@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.algonquincollege.hass0302.hsvcolorpicker.MainActivity">
+
+
+    <TextView
+        android:id="@+id/colorSwatch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:height="100dp"
+        android:background="#000"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/colorSwatch"
+        android:text="Hue"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <FrameLayout
+        android:id="@+id/hueLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hueTV">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/gradient_hue" />
+
+        <SeekBar
+            android:id="@+id/hueSB"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/colorSwatch"
+            android:max="255" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/saturationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hueLayout"
+        android:text="Saturation"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <FrameLayout
+        android:id="@+id/saturationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/saturationTV">
+
+        <ImageView
+            android:id="@+id/saturationIV"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/gradient_saturation" />
+
+        <SeekBar
+            android:id="@+id/saturationSB"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp" />
+        <!--android:layout_below="@+id/saturationTV"-->
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/valueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/saturationLayout"
+        android:text="Value"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <FrameLayout
+        android:id="@+id/valueLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/valueTV">
+
+        <ImageView
+            android:id="@+id/valueIV"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/gradient_brightness" />
+
+        <SeekBar
+            android:id="@+id/valueSB"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp" />
+        <!--android:layout_below="@+id/saturationTV"-->
+        <!--android:max="255" />-->
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/blackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_marginStart="14dp"
+        android:background="#000"
+        android:text="Black"
+        android:textColor="#FFF"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_toEndOf="@+id/blackButton"
+        android:background="#FF0000"
+        android:text="Red"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/limeButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_toEndOf="@+id/redButton"
+        android:background="#00FF00"
+        android:text="Lime"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/blueButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_toEndOf="@+id/limeButton"
+        android:background="#0000FF"
+        android:text="Blue"
+        android:textColor="#FFF"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/yellowButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_toEndOf="@+id/blueButton"
+        android:background="#FFFF00"
+        android:text="Yellow"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/cyanButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/valueLayout"
+        android:layout_toEndOf="@+id/yellowButton"
+        android:background="#00FFFF"
+        android:text="Cyan"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/magentaButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/blackButton"
+        android:layout_below="@+id/blackButton"
+        android:background="#FF00FF"
+        android:text="Magenta"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/silverButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/greenButton"
+        android:layout_toEndOf="@+id/magentaButton"
+        android:background="#C0C0C0"
+        android:text="Silver"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/grayButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/limeButton"
+        android:layout_toEndOf="@+id/silverButton"
+        android:background="#808080"
+        android:text="Gray"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/maroonButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/limeButton"
+        android:layout_toEndOf="@+id/limeButton"
+        android:background="#800000"
+        android:text="Maroon"
+        android:textColor="#FFF"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/oliveButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/whiteButton"
+        android:layout_toEndOf="@+id/maroonButton"
+        android:background="#808000"
+        android:text="Olive"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/greenButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/grayButton"
+        android:layout_toEndOf="@+id/navyButton"
+        android:background="#008000"
+        android:text="Green"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/purpleButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/navyButton"
+        android:layout_alignTop="@+id/whiteButton"
+        android:layout_toStartOf="@+id/navyButton"
+        android:background="#800080"
+        android:text="Puprle"
+        android:textColor="#FFF"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/tealButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/maroonButton"
+        android:layout_toEndOf="@+id/yellowButton"
+        android:background="#008080"
+        android:text="Teal"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/navyButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/magentaButton"
+        android:layout_toEndOf="@+id/magentaButton"
+        android:background="#000080"
+        android:text="Navy"
+        android:textColor="#FFF"
+        android:textSize="8dp" />
+
+    <Button
+        android:id="@+id/whiteButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/greenButton"
+        android:layout_toEndOf="@+id/greenButton"
+        android:background="#FFF"
+        android:text="White"
+        android:textSize="8dp" />
+
+</RelativeLayout>
