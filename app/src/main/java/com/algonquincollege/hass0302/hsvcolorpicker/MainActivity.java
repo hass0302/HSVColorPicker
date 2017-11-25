@@ -5,17 +5,21 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ *  Purpose/Description HSV Color Picker, MIDTERM
+ *  @author Damian Ha (hass0302@algonquinlive.com)
+ */
 
 public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBarChangeListener {
     // CLASS VARIABLES
@@ -91,7 +95,6 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
         myellowButton = (Button) findViewById(R.id.yellowButton);
         mwhiteButton = (Button) findViewById(R.id.whiteButton);
 
-
         // set the domain (i.e. max) for each component
         mHueSB.setMax(HSVModel.MAX_HUE);
         mSaturationSB.setMax(HSVModel.MAX_SV);
@@ -110,6 +113,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mredButton.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +124,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mblueButton.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +135,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mwhiteButton.setOnClickListener(new View.OnClickListener() {
@@ -137,6 +146,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mcyanButton.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +157,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mgrayButton.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +168,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mgreenButton.setOnClickListener(new View.OnClickListener() {
@@ -164,6 +179,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         msilverButton.setOnClickListener(new View.OnClickListener() {
@@ -173,6 +190,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mlimeButton.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +201,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mmagentaButton.setOnClickListener(new View.OnClickListener() {
@@ -191,6 +212,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mmaroonButton.setOnClickListener(new View.OnClickListener() {
@@ -200,6 +223,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mnavyButton.setOnClickListener(new View.OnClickListener() {
@@ -209,6 +234,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         moliveButton.setOnClickListener(new View.OnClickListener() {
@@ -218,6 +245,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mpurpleButton.setOnClickListener(new View.OnClickListener() {
@@ -227,6 +256,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         mtealButton.setOnClickListener(new View.OnClickListener() {
@@ -236,6 +267,8 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
         myellowButton.setOnClickListener(new View.OnClickListener() {
@@ -245,6 +278,16 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
                 mSaturationSB.setProgress(mModel.getSaturation());
                 mValueSB.setProgress(mModel.getValue());
                 mColorSwatch.setBackgroundColor(mModel.getColor());
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // when the Color Swatch is clicked. it will display the HSV Value
+        mColorSwatch.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                final String msg = "H: " + mModel.getHue() + " S: " + mModel.getSaturation() + " V: " + mModel.getValue() + "%";
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -262,6 +305,7 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here.
